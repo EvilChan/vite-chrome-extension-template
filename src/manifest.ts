@@ -5,15 +5,16 @@ const manifest: chrome.runtime.Manifest = {
   name: pkg.name,
   version: pkg.version,
   description: pkg.description,
+  host_permissions: ['*://*/*'],
   background: {
-    service_worker: 'src/background.ts',
-  },
-  options_ui: {
-    page: 'index.html',
-    open_in_tab: false,
+    service_worker: 'src/entries/background.ts',
   },
   action: {
-    default_popup: 'index.html',
+    default_popup: 'src/entries/popup/index.html',
+  },
+  options_ui: {
+    page: 'src/entries/options/index.html',
+    open_in_tab: false,
   },
 }
 
