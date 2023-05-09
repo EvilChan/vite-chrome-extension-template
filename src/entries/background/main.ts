@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(async () => {
-  const url = chrome.runtime.getURL('index.html')
+  const url = chrome.runtime.getURL('src/entries/options/index.html')
 
   const tab = await chrome.tabs.create({ url: url })
 

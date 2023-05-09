@@ -7,7 +7,7 @@ const manifest: chrome.runtime.Manifest = {
   description: pkg.description,
   host_permissions: ['*://*/*'],
   background: {
-    service_worker: 'src/entries/background.ts',
+    service_worker: 'src/entries/background/main.ts',
   },
   action: {
     default_popup: 'src/entries/popup/index.html',
