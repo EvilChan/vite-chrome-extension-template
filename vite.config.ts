@@ -1,9 +1,11 @@
-import { resolve } from 'path'
+import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import eslint from 'vite-plugin-eslint'
 import webExtension from '@samrum/vite-plugin-web-extension'
 import manifest from './src/manifest'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,9 +19,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    eslint({
-      include: ['src/**/*.ts', 'src/**/*.vue'],
-    }),
     webExtension({
       manifest: {
         ...manifest,

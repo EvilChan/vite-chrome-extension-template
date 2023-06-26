@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "formulahendry.auto-complete-tag",
-    "aminer.codegeex",
     "editorconfig.editorconfig",
     "usernamehw.errorlens",
     "dbaeumer.vscode-eslint",
